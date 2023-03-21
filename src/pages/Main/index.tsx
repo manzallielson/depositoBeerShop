@@ -1,12 +1,19 @@
+import { Outlet } from 'react-router-dom'
+
 import { Sidebar } from '../../components/Sidebar'
 import * as S from './styles'
+import * as IMG from '../../assets/index'
 
 export default function Main() {
   return (
-    <S.Container>
-      <Sidebar />
-
-      <h1>Main</h1>
-    </S.Container>
+    <>
+      <S.Container>
+        <Sidebar />
+        <section>
+          <img src={IMG.Logo} alt='logo' />
+          <Outlet />
+        </section>
+      </S.Container>
+    </>
   )
 }

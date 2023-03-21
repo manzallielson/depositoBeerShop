@@ -27,14 +27,19 @@ const images = [
 
 export function Sidebar() {
   const [active, setActive] = useState<number>()
+  const [menuOpen, setMenuOpen] = useState<boolean>(false)
 
   const SelectMenu = (index: number) => {
-    console.log(index)
     setActive(index)
   }
+
+  const HandleToggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
-    <S.Container>
-      <button>
+    <S.Container isMenuOpen={menuOpen}>
+      <button onClick={() => HandleToggleMenu()}>
         <img src={Menu} alt='' />
       </button>
       <nav>

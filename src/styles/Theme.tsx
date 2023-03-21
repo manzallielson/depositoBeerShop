@@ -11,7 +11,7 @@ const rem = (px: number) => `${round(px / 16)}rem`
 export const theme: DefaultTheme = {
   colors: {
     white: '#FFFFFF',
-    black: '#0C0D0F',
+    black: '#201E1F',
     red: '#E03131',
     orange: '#E8590C',
     yellow: '#FCC419',
