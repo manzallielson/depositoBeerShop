@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom'
-
 import { Sidebar } from '../../components/Sidebar'
 import * as S from './styles'
 import * as IMG from '../../assets/index'
@@ -10,7 +9,9 @@ export default function Main() {
       <S.Container>
         <Sidebar />
         <section>
-          <img src={IMG.Logo} alt='logo' />
+          {/* <S.Logo src={IMG.burger} alt='logo' /> */}
+
+          <S.Logo src={IMG.Logo2} alt='logo' />
           <Outlet />
         </section>
       </S.Container>

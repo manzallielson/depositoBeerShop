@@ -10,9 +10,9 @@ export function AppRoutes() {
   return (
     <Routes>
       <Route path='/' element={<MainPage />}>
-        <Route path='/' element={<BurgersPage />} />
+        <Route path='/burgers' element={<BurgersPage />} />
         <Route path='/bebidas' element={<BebidasPage />} />
-        <Route path='/bebidas' element={<PizzasPage />} />
+        <Route path='/pizzas' element={<PizzasPage />} />
         <Route path='/sobremesas' element={<SobremesasPage />} />
       </Route>
     </Routes>

@@ -5,33 +5,28 @@ import { ReactComponent as PizzaIcon } from '../../assets/pizza.svg'
 import { ReactComponent as SodaPopIcon } from '../../assets/soda.svg'
 import { ReactComponent as IceCreamIcon } from '../../assets/ice-cream.svg'
 import { useState } from 'react'
-
+import { NavLink } from 'react-router-dom'
 const images = [
   {
     img: <BurguerIcon />,
-    span: 'Hambúrgueres',
+    span: 'burgers',
   },
   {
     img: <PizzaIcon />,
-    span: 'Pizza',
+    span: 'pizzas',
   },
   {
     img: <SodaPopIcon />,
-    span: 'Bebidas',
+    span: 'bebidas',
   },
   {
     img: <IceCreamIcon />,
-    span: 'Sorvetes',
+    span: 'sobremesas',
   },
 ]
 
 export function Sidebar() {
-  const [active, setActive] = useState<number>()
   const [menuOpen, setMenuOpen] = useState<boolean>(false)
-
-  const SelectMenu = (index: number) => {
-    setActive(index)
-  }
 
   const HandleToggleMenu = () => {
     setMenuOpen(!menuOpen)
@@ -42,15 +37,16 @@ export function Sidebar() {
       <button onClick={() => HandleToggleMenu()}>
         <img src={Menu} alt='' />
       </button>
+
       <nav>
         <ul>
           {images.map((item, index) => {
             return (
-              <li key={index} onClick={() => SelectMenu(index)}>
-                <a href='#' className={index === active ? 'active' : ''}>
+              <li key={index}>
+                <NavLink to={`/${item.span}`}>
                   {item.img}
                   <span>{item.span}</span>
-                </a>
+                </NavLink>
               </li>
             )
           })}
