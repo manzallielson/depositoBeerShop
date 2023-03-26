@@ -14,6 +14,7 @@ export const Container = styled.aside<ContainerProps>`
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-height: 100vh;
 
     button {
       background: none;
@@ -29,7 +30,7 @@ export const Container = styled.aside<ContainerProps>`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 1.5rem;
+        gap: 2.5rem;
       }
       li {
         a {

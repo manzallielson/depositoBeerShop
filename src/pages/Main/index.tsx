@@ -8,9 +8,8 @@ export default function Main() {
     <>
       <S.Container>
         <Sidebar />
-        <section>
-          {/* <S.Logo src={IMG.burger} alt='logo' /> */}
 
+        <section>
           <S.Logo src={IMG.Logo2} alt='logo' />
           <Outlet />
         </section>
