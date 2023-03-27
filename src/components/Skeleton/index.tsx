@@ -5,5 +5,5 @@ export interface SkeletonProps {
 }
 
 export const Skeleton = ({ type }: SkeletonProps) => {
-  return <S.SkeletonElement></S.SkeletonElement>
+  return <S.SkeletonElement type={type}></S.SkeletonElement>
 }

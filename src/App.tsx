@@ -5,14 +5,17 @@ import { AppRoutes } from './routes'
 import { Theme } from './styles/Theme'
 import { GlobalStyle } from './styles/global'
 import { Normalize } from 'styled-normalize'
+import { SnackProvider } from './context/snackContext'
 
 export default function App() {
   return (
     <BrowserRouter>
       <Theme>
-        <AppRoutes />
-        <GlobalStyle />
-        <Normalize />
+        <SnackProvider>
+          <AppRoutes />
+          <GlobalStyle />
+          <Normalize />
+        </SnackProvider>
       </Theme>
     </BrowserRouter>
   )

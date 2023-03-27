@@ -1,5 +1,5 @@
 import * as S from './styles'
-import { Skeleton } from '../Skeleton'
+import { Skeleton } from '../../Skeleton'
 
 export const SkeletonSnack = () => {
   return (

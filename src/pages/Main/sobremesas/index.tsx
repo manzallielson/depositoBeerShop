@@ -1,18 +1,11 @@
-import { useEffect, useState } from 'react'
 import { Head } from '../../../components/Head'
 import { Snacks } from '../../../components/Snacks'
 import { SnackTitle } from '../../../components/SnackTitle'
-import { getIceCreams } from '../../../services/api'
+
+import { useSnack } from '../../../hooks/useSnack'
 
 export default function Sobremesas() {
-  const [iceCreams, setIceCreams] = useState([])
-
-  useEffect(() => {
-    ;(async () => {
-      const iceCreams = await getIceCreams()
-      setIceCreams(iceCreams.data)
-    })()
-  }, [])
+  const { iceCreams } = useSnack()
 
   return (
     <>
