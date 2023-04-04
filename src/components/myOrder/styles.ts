@@ -6,7 +6,7 @@ export const Container = styled(Link)`
   ${({ theme }) => css`
     position: absolute;
     right: 3.5rem;
-    bottom: 2.5rem;
+    bottom: 5.5rem;
 
     background-color: ${theme.colors.red};
     padding: 0.5rem 1rem;
@@ -29,7 +29,7 @@ export const Container = styled(Link)`
     svg {
       fill: ${theme.colors.white};
       width: 2rem;
-      height: 2remv;
+      height: 2rem;
     }
   `}
 `
